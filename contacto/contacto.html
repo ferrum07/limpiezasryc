@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto y Localización - Limpiezas R&C</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../logo/logo_compacto.png" type="image/png">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <header class="cabecera-fija">
+    <div class="logo-container">
+      <a href="../index.html">
+        <img src="../logo/logo_compacto.png" alt="Limpiezas R&C Logo" class="logo">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a href="../index.html">Inicio</a>
+      <a href="../empresa/empresa.html">Empresa</a>
+      <a href="../servicios/servicios.html">Servicios</a>
+      <a href="../galeria/galeria.html">Galería</a>
+      <a href="contacto.html" class="active">Contacto y Localización</a>
+    </nav>
+  </header>
+  
+  <main class="contenido">
+    
+    <section class="blur-banner">
+      <h2 class="banner-titulo">Pide tu Presupuesto sin Compromiso</h2>
+      <p>
+        Contáctanos por teléfono, email o rellena el formulario. Te responderemos en menos de 24 horas.
+      </p>
+    </section>
+    
+    <div class="contacto-layout">
+        
+        <div class="col-formulario">
+            <h3 class="formulario-titulo">Envíanos un mensaje rápido</h3>
+            
+            <form action="#" method="POST" class="contact-form">
+                <div class="input-grupo">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                </div>
+                <div class="input-grupo">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-grupo">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                </div>
+                <div class="input-grupo">
+                    <select id="servicio" name="servicio" required>
+                        <option value="" disabled selected>Selecciona el servicio que necesitas</option>
+                        <option value="hogar">Limpieza de Hogar</option>
+                        <option value="oficina">Limpieza de Oficinas</option>
+                        <option value="comunidad">Limpieza de Comunidades</option>
+                        <option value="especializada">Limpieza Especializada (Obra, Cristales, etc.)</option>
+                    </select>
+                </div>
+                <div class="input-grupo">
+                    <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente tus necesidades" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-big">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                </button>
+            </form>
+        </div>
+        
+        <div class="col-info-mapa">
+            <h3 class="info-titulo">Información de Contacto</h3>
+            <div class="datos-contacto">
+                <p><i class="fas fa-map-marker-alt"></i>Levante, 07009 Palma, Illes Balears</p>
+                <p><i class="fas fa-phone"></i><a href="tel:+34671263683">671 263 683</a></p>
+                <p><i class="fas fa-envelope"></i><a href="mailto:contacto@limpiezasryc.com">contacto@limpiezasryc.com</a></p>
+                <p><i class="fab fa-whatsapp"></i><a href="https://wa.me/34671263683" target="_blank">671 263 683</a></p>
+            </div>
+
+            <h3 class="info-titulo localizacion-titulo">Localización</h3>
+            
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.2893320890194!2d2.6750565758852036!3d39.59816430505328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793152460eed1%3A0x77d63b395c36d740!2sCarrer%20de%20Cala%20Malgrana%2C%20Levante%2C%2007009%20Palma%2C%20Illes%20Balears!5e0!3m2!1ses!2ses!4v1763036841960!5m2!1ses!2ses" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+    </div>
+  </main>
+  
+  <footer>
+    <span>2025 © LIMPIEZAS R&C</span>
+  </footer>
+</body>
+</html>
