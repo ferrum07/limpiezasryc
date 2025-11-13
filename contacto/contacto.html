@@ -1,103 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto y Localización - Limpiezas R&C</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="../logo/logo_compacto.png" type="image/png">
-  <link rel="stylesheet" href="../styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Contacto y Localización - Limpiezas R&C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../logo/logo_compacto.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  
-  <header class="cabecera-fija">
-    <div class="logo-container">
-      <a href="../index.html">
-        <img src="../logo/logo_compacto.png" alt="Limpiezas R&C Logo" class="logo">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <a href="../index.html">Inicio</a>
-      <a href="../empresa/empresa.html">Empresa</a>
-      <a href="../servicios/servicios.html">Servicios</a>
-      <a href="../galeria/galeria.html">Galería</a>
-      <a href="contacto.html" class="active">Contacto y Localización</a>
-    </nav>
-  </header>
-  
-  <main class="contenido">
     
-    <section class="blur-banner">
-      <h2 class="banner-titulo">Pide tu Presupuesto sin Compromiso</h2>
-      <p>
-        Contáctanos por teléfono, email o rellena el formulario. Te responderemos en menos de 24 horas.
-      </p>
-    </section>
-    
-    <div class="contacto-layout">
-        
-        <div class="col-formulario">
-            <h3 class="formulario-titulo">Envíanos un mensaje rápido</h3>
-            
-            <form action="#" method="POST" class="contact-form">
-                <div class="input-grupo">
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
-                </div>
-                <div class="input-grupo">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="input-grupo">
-                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                </div>
-                <div class="input-grupo">
-                    <select id="servicio" name="servicio" required>
-                        <option value="" disabled selected>Selecciona el servicio que necesitas</option>
-                        <option value="hogar">Limpieza de Hogar</option>
-                        <option value="oficina">Limpieza de Oficinas</option>
-                        <option value="comunidad">Limpieza de Comunidades</option>
-                        <option value="especializada">Limpieza Especializada (Obra, Cristales, etc.)</option>
-                    </select>
-                </div>
-                <div class="input-grupo">
-                    <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente tus necesidades" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit" class="btn-big">
-                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
-                </button>
-            </form>
+    <header class="cabecera-fija">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../logo/logo_compacto.png" alt="Limpiezas R&C Logo" class="logo">
+            </a>
         </div>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav" id="menu-principal">
+            <a href="../index.html">Inicio</a>
+            <a href="../empresa/empresa.html">Empresa</a>
+            <a href="../servicios/servicios.html">Servicios</a>
+            <a href="contacto.html" class="active">Contacto y Localización</a>
+        </nav>
+    </header>
+    
+    <main class="contenido">
         
-        <div class="col-info-mapa">
-            <h3 class="info-titulo">Información de Contacto</h3>
-            <div class="datos-contacto">
-                <p><i class="fas fa-map-marker-alt"></i>Levante, 07009 Palma, Illes Balears</p>
-                <p><i class="fas fa-phone"></i><a href="tel:+34671263683">671 263 683</a></p>
-                <p><i class="fas fa-envelope"></i><a href="mailto:contacto@limpiezasryc.com">contacto@limpiezasryc.com</a></p>
-                <p><i class="fab fa-whatsapp"></i><a href="https://wa.me/34671263683" target="_blank">671 263 683</a></p>
+        <section class="blur-banner">
+            <h2 class="banner-titulo">Estamos aquí para ayudarte</h2>
+            <p>
+                Ponte en contacto con nosotros para un presupuesto sin compromiso o cualquier consulta.
+            </p>
+        </section>
+        
+        <section class="contacto-wrapper" style="max-width: 1000px; margin: 40px auto; padding: 0 15px;">
+            
+            <div class="contact-grid">
+                
+                <div class="contact-mapa">
+                    <h2 class="elige-titulo" style="text-align: center;">Nuestra Ubicación</h2>
+                    <div class="map-container" style="border-radius: 12px; overflow: hidden; box-shadow: var(--sombra); margin-top: 20px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.9150035515795!2d2.651786!3d39.575916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129759d4791e847b%3A0x633917d712411985!2sPalma%20de%20Mallorca%2C%20Balearic%20Islands!5e0!3m2!1sen!2ses!4v1700236528751!5m2!1sen!2ses"
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="contact-details-col" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <h2 class="elige-titulo" style="margin-bottom: 30px;">Contacta Directamente</h2>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 450px;">
+                        
+                        <a href="https://maps.app.goo.gl/tML3Pcb5n7wf8umD9" target="_blank" class="btn-big" style="flex-grow: 1; flex-basis: calc(50% - 15px); padding: 16px 10px; font-size: 1.05em; margin: 0;">
+                            <i class="fa fa-map-marker-alt"></i> Palma, 07009
+                        </a>
+                        <a href="tel:+34671263683" class="btn-big" style="flex-grow: 1; flex-basis: calc(50% - 15px); padding: 16px 10px; font-size: 1.05em; margin: 0;">
+                            <i class="fa fa-phone"></i> Llamar
+                        </a>
+                        
+                        <a href="https://wa.me/34671263683" target="_blank" class="btn-big" style="flex-grow: 1; flex-basis: calc(50% - 15px); padding: 16px 10px; font-size: 1.05em; margin: 15px 0 0 0;">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="mailto:contacto@limpiezasryc.com" class="btn-big" style="flex-grow: 1; flex-basis: calc(50% - 15px); padding: 16px 10px; font-size: 1.05em; margin: 15px 0 0 0;">
+                            <i class="fa fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <h3 class="info-titulo localizacion-titulo">Localización</h3>
-            
-            <div class="mapa-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.2893320890194!2d2.6750565758852036!3d39.59816430505328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793152460eed1%3A0x77d63b395c36d740!2sCarrer%20de%20Cala%20Malgrana%2C%20Levante%2C%2007009%20Palma%2C%20Illes%20Balears!5e0!3m2!1ses!2ses!4v1763036841960!5m2!1ses!2ses" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
+        </section>
         
-    </div>
-  </main>
-  
-  <footer>
-    <span>2025 © LIMPIEZAS R&C</span>
-  </footer>
+    </main>
+    
+    <footer>
+        <span>2025 © LIMPIEZAS R&C</span>
+    </footer>
+    
+    <script>
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu-principal');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('is-open');
+      });
+    </script>
 </body>
 </html>
