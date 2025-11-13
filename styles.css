@@ -97,6 +97,28 @@ a:hover {
   transform: translateY(-2px);
 }
 
+/* --- ESTILOS DEL BOTÓN DE HAMBURGUESA --- */
+.menu-toggle {
+    display: none; /* Por defecto está oculto en desktop */
+    background: transparent;
+    border: none;
+    color: var(--blanco);
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    z-index: 1001; /* Asegura que esté por encima del menú colapsado */
+}
+.menu-toggle:hover {
+    color: var(--verde-limpieza);
+}
+
+/* Estado del botón al abrir/cerrar para cambiar el icono (X) */
+.menu-toggle[aria-expanded="true"] .fa-bars::before {
+    content: "\f00d"; /* Ícono de 'X' (cruz) */
+}
+
+
 /* BANNERS Y SECCIONES DE INFO (Verde claro degradado) */
 .blur-banner, .banner-limpieza {
   background: linear-gradient(105deg, var(--verde-limpieza) 70%, var(--turquesa) 100%);
@@ -447,6 +469,10 @@ footer {
     font-weight: 600;
 }
 
+.datos-contacto a:hover {
+    color: var(--verde-limpieza); /* Añadir hover para que los enlaces se vean */
+}
+
 .mapa-container {
     border-radius: var(--radius);
     overflow: hidden;
@@ -455,6 +481,46 @@ footer {
 
 .localizacion-titulo {
     margin-top: 0; 
+}
+
+/* --- Estilos para la página de Contacto (2 columnas) --- */
+.contact-grid {
+    display: flex;
+    gap: 40px; /* Espacio entre columnas */
+    margin: 40px 0; /* Espacio de margen superior e inferior */
+    flex-wrap: nowrap; /* Evita que las columnas se apilen en pantallas grandes */
+    align-items: flex-start; /* Alinea el contenido a la parte superior */
+    text-align: left; /* Alineación del texto por defecto */
+}
+
+.contact-mapa, .contact-details-col {
+    flex: 1 1 48%; /* Cada columna toma casi la mitad del espacio */
+    min-width: 280px;
+}
+
+.contact-details-col {
+    /* Aseguramos que los elementos dentro de esta columna se centren */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 20px; /* Ajuste para alinear los títulos */
+    text-align: center; /* Centramos el contenido de esta columna */
+}
+
+/* Responsive para la página de Contacto */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column; /* Apila las columnas en móviles */
+        gap: 25px;
+    }
+    .contact-mapa, .contact-details-col {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    .contact-details-col {
+        padding-top: 0;
+    }
 }
 
 
@@ -496,27 +562,57 @@ footer {
     }
 }
 
+/* --- Media Query para el Menú de Hamburguesa --- */
 @media (max-width: 670px) {
-  /* Responsive General: Cabecera y Index */
-  body { padding-top: 110px; }
-  .cabecera-fija {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-    align-items: center;
-  }
-  .logo-container {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 8px;
-  }
-  .main-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-  .main-nav a { margin: 4px; padding: 6px 10px; }
+  /* RESPONSIVE GENERAL Y CABECERA (HAMBURGUESA) */
+  body { padding-top: 70px; } /* Ajustar padding para la altura de la cabecera móvil */
   
+  .cabecera-fija {
+    flex-direction: row; /* Colocar logo y botón en fila */
+    height: 70px;
+    padding: 0.5em 1.5em;
+    justify-content: space-between; /* Alinea logo a un lado y botón al otro */
+  }
+  
+  .logo-container { margin-bottom: 0; }
+  
+  /* MOSTRAR BOTÓN DE HAMBURGUESA */
+  .menu-toggle {
+      display: block; 
+  }
+  
+  .main-nav {
+    /* MENÚ COLAPSADO */
+    position: absolute;
+    top: 70px; /* Debajo de la cabecera */
+    left: 0;
+    width: 100%;
+    max-height: 0; /* Ocultar el contenido */
+    overflow: hidden;
+    background: var(--verde-oscuro); /* Mismo color de la cabecera */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-direction: column; /* Elementos de navegación en columna */
+    padding: 0; /* Quitar padding inicial */
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    z-index: 1000; /* Asegurar que está sobre el contenido */
+  }
+  
+  /* MENÚ ABIERTO */
+  .main-nav.is-open {
+    max-height: 300px; /* Altura suficiente para mostrar todos los enlaces */
+    padding: 10px 0;
+  }
+
+  .main-nav a { 
+    margin: 5px 15px;
+    padding: 10px 15px;
+    width: auto; 
+    text-align: left; /* Alineamos a la izquierda para un menú tipo lista */
+    border-radius: 4px;
+    /* Al hacer hover en móvil, tiene el mismo color que en desktop */
+  }
+  
+  /* Resto de estilos responsive existentes */
   .banner-titulo { font-size: 2em !important; }
   .gallery-columns { flex-direction: column; align-items: center; gap: 14px; }
   .gallery-col { max-width: 90%; min-width: 250px; }
