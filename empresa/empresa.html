@@ -79,21 +79,20 @@
     </section>
 
     <section class="equipo-foto">
-      <img src="../imagenes/equipo.jpg" alt="Foto del equipo de Limpiezas R&C" loading="lazy"> </section>
 
   </main>
   
-  <footer>
-    <span>2025 © LIMPIEZAS R&C</span>
-  </footer>
-  
-  <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      const menu = document.getElementById('menu-principal');
-      const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
-      this.setAttribute('aria-expanded', !isExpanded);
-      menu.classList.toggle('is-open');
-    });
-  </script>
+    <footer>
+        <span>2025 © LIMPIEZAS R&C</span>
+    </footer>
+    
+    <script>
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu-principal');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('is-open');
+      });
+    </script>
 </body>
 </html>
