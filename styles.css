@@ -1,0 +1,628 @@
+:root {
+  --cian-principal: #07E9FF; /* Cian principal (el color solicitado) */
+  --cian-oscuro: #008f9c; /* Cian oscuro para Cabecera y Títulos (derivado del principal) */
+  --azul-claro: #e5f3fd; /* Tono muy claro/pastel (se mantiene) */
+  --gris-claro: #f8fbfd;
+  --blanco: #ffffff;
+  --negro-suave: #222;
+  --sombra: 0 4px 15px rgba(7, 233, 255, 0.40); /* Sombra adaptada al nuevo color */
+  --radius: 12px; 
+}
+
+/* General */
+* { box-sizing: border-box; }
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: var(--negro-suave);
+  line-height: 1.6;
+  font-size: 1.05em; 
+  background: linear-gradient(120deg, var(--blanco) 65%, var(--gris-claro) 100%);
+  margin: 0;
+  padding-top: 70px;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+}
+a {
+  color: var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+}
+.contenido {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+/* CABECERA FIJA */
+.cabecera-fija {
+  position: fixed;
+  width: 100%;
+  top: 0; left: 0; z-index: 1000;
+  /* Fondo oscuro para que el logo blanco destaque */
+  background: var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+  color: var(--blanco);
+  box-shadow: var(--sombra);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1.5em; 
+  height: 65px; 
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 55px; 
+    width: auto;
+    /* Fondo BLANCO para máximo contraste con la cabecera */
+    background-color: var(--blanco); 
+    border: 3px solid var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+    border-radius: 8px; 
+    padding: 3px 5px; 
+    object-fit: contain;
+    margin-right: 15px; 
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); 
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; 
+  justify-content: flex-end;
+}
+.main-nav a { 
+  color: var(--blanco);
+  background: transparent;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0 5px;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  transition: background 0.18s, transform 0.18s;
+}
+.main-nav a.active, .main-nav a:not(.active):hover {
+  /* Al hacer hover, usamos el cian principal */
+  background: var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+  color: var(--blanco);
+  transform: translateY(-2px);
+}
+
+/* --- ESTILOS DEL BOTÓN DE HAMBURGUESA --- */
+.menu-toggle {
+    display: none; /* Por defecto está oculto en desktop */
+    background: transparent;
+    border: none;
+    color: var(--blanco);
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    z-index: 1001; /* Asegura que esté por encima del menú colapsado */
+}
+.menu-toggle:hover {
+    color: var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+}
+
+/* Estado del botón al abrir/cerrar para cambiar el icono (X) */
+.menu-toggle[aria-expanded="true"] .fa-bars::before {
+    content: "\f00d"; /* Ícono de 'X' (cruz) */
+}
+
+
+/* BANNERS Y SECCIONES DE INFO (Cian principal degradado) */
+.blur-banner, .banner-limpieza {
+  background: linear-gradient(105deg, var(--cian-principal) 70%, #63e6be 100%); /* Cambiado de --verde-limpieza a --cian-principal */
+  color: var(--blanco);
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  margin: 35px auto;
+  padding: 30px 18px;
+  max-width: 800px;
+  text-align: center;
+}
+.banner-titulo {
+    color: var(--blanco) !important;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+.acreditados-titulo { color: var(--blanco) !important; font-size: 1.8em; }
+
+
+/* Galería */
+.gallery-columns {
+  display: flex;
+  gap: 20px;
+  margin: 32px 0;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+.gallery-col {
+  flex: 1 1 200px; 
+  max-width: 300px;
+  text-align: center;
+}
+.gallery-img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  aspect-ratio: 4/3; 
+  object-fit: cover;
+}
+.caption { /* Etiquetas oscuras */
+  margin-top: 12px;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--negro-suave); 
+  background: var(--blanco); 
+  border-radius: 8px;
+  padding: 8px;
+  border-top: 4px solid var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+/* Botones (Hover sutil) */
+.btn-big {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px; 
+  font-size: 1.1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px; 
+  background: linear-gradient(105deg, var(--cian-principal) 70%, #63e6be 100%); /* Cambiado de --verde-limpieza a --cian-principal */
+  color: var(--blanco);
+  box-shadow: 0 4px 8px rgba(0, 143, 156, 0.4); /* Adaptado la sombra al nuevo cian */
+  cursor: pointer;
+  margin: 10px 8px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.btn-big:hover {
+  /* HOVER SUTIL: Degradado más claro */
+  background: linear-gradient(105deg, #63e6be 30%, var(--cian-principal) 100%); /* Cambiado de --turquesa a un color más claro compatible */
+  transform: scale(1.02); 
+  box-shadow: 0 4px 10px rgba(7, 233, 255, 0.7); /* Adaptado la sombra al nuevo cian */
+}
+
+/* Elegirnos destacado */
+.elige-titulo {
+  font-size: 2.1em;
+  text-align: center;
+  margin: 40px 0 14px 0;
+}
+.elige-lista {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+  padding: 0;
+  list-style: none;
+}
+.elige-lista li {
+  position: relative;
+  padding: 12px 22px 12px 40px; 
+  background: var(--blanco); 
+  color: var(--negro-suave);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+  border-left: 5px solid var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+  transition: transform 0.2s, border-color 0.2s;
+}
+.elige-lista li:hover { 
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-left: 5px solid var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+}
+.elige-lista li::before {
+    content: "\f058"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* FOOTER */
+footer {
+  background: linear-gradient(105deg, var(--cian-principal) 70%, #63e6be 100%); /* Cambiado de --verde-limpieza a --cian-principal */
+  color: var(--blanco);
+  text-align: center;
+  padding: 20px 10px; 
+  margin-top: 50px;
+  font-size: 1.1em;
+  border-radius: 0;
+}
+
+/* ---------------------------------- */
+/* --- ESTILOS ESPECÍFICOS: EMPRESA --- */
+/* ---------------------------------- */
+
+.valores-container {
+    padding: 20px 0;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+.columnas-empresa {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.col-valor {
+    flex: 1 1 250px;
+    background: var(--blanco);
+    border: 1px solid var(--azul-claro);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.col-valor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 143, 156, 0.2); /* Adaptado la sombra al nuevo cian */
+}
+.col-valor h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px 0;
+}
+.lista-valores {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+.lista-valores li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--negro-suave);
+    font-size: 0.95em;
+}
+.lista-valores li::before {
+    content: "\f00c"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+    position: absolute;
+    left: 0;
+}
+.equipo-foto {
+    margin: 30px auto 50px auto;
+    max-width: 1000px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+.equipo-foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ------------------------------------ */
+/* --- ESTILOS ESPECÍFICOS: SERVICIOS --- */
+/* ------------------------------------ */
+
+.servicios-categorias {
+    padding: 20px 0;
+    margin: 40px auto;
+    max-width: 1100px;
+}
+.columnas-servicios {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-servicio {
+    flex: 1 1 300px;
+    background: var(--blanco);
+    border: 1px solid var(--gris-claro);
+    border-radius: var(--radius);
+    padding: 30px 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-servicio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 143, 156, 0.25); /* Adaptado la sombra al nuevo cian */
+}
+.icono-servicio {
+    color: var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+    margin-bottom: 15px;
+}
+.card-servicio h3 {
+    font-size: 1.6em;
+    color: var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+    margin: 10px 0 15px 0;
+}
+.card-servicio p {
+    font-size: 0.95em;
+    color: var(--negro-suave);
+    min-height: 4em; 
+}
+.detalles-servicio {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+.detalles-servicio li {
+    padding: 5px 0;
+    font-size: 0.9em;
+    color: var(--negro-suave);
+    font-weight: 500;
+}
+.detalles-servicio li .fa-check-circle {
+    color: var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+    margin-right: 8px;
+}
+
+
+/* ------------------------------------- */
+/* --- ESTILOS ESPECÍFICOS: CONTACTO --- */
+/* ------------------------------------- */
+
+.contacto-layout {
+    display: flex;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-formulario {
+    flex: 2 1 450px; 
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.col-info-mapa {
+    flex: 1 1 300px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario-titulo, .info-titulo {
+    font-size: 1.8em;
+    color: var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Estilos del Formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-grupo input, .input-grupo select, .input-grupo textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--negro-suave);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-grupo input:focus, .input-grupo select:focus, .input-grupo textarea:focus {
+    border-color: var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+    box-shadow: 0 0 0 3px rgba(7, 233, 255, 0.4); /* Adaptado la sombra al nuevo cian */
+    outline: none;
+}
+
+.input-grupo textarea {
+    resize: vertical;
+}
+
+/* Estilos de Información y Mapa */
+.datos-contacto {
+    background: var(--azul-claro); 
+    padding: 20px;
+    border-radius: var(--radius);
+    color: var(--negro-suave);
+}
+
+.datos-contacto p {
+    margin: 8px 0;
+    font-size: 1em;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.datos-contacto i {
+    color: var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+    margin-right: 10px;
+}
+
+.datos-contacto a {
+    color: var(--negro-suave);
+    font-weight: 600;
+}
+
+.datos-contacto a:hover {
+    color: var(--cian-principal); /* Cambiado de --verde-limpieza a --cian-principal */
+}
+
+.mapa-container {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.localizacion-titulo {
+    margin-top: 0; 
+}
+
+/* --- Estilos para la página de Contacto (2 columnas) --- */
+.contact-grid {
+    display: flex;
+    gap: 40px; /* Espacio entre columnas */
+    margin: 40px 0; /* Espacio de margen superior e inferior */
+    flex-wrap: nowrap; /* Evita que las columnas se apilen en pantallas grandes */
+    align-items: flex-start; /* Alinea el contenido a la parte superior */
+    text-align: left; /* Alineación del texto por defecto */
+}
+
+.contact-mapa, .contact-details-col {
+    flex: 1 1 48%; /* Cada columna toma casi la mitad del espacio */
+    min-width: 280px;
+}
+
+.contact-details-col {
+    /* Aseguramos que los elementos dentro de esta columna se centren */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 20px; /* Ajuste para alinear los títulos */
+    text-align: center; /* Centramos el contenido de esta columna */
+}
+
+/* Responsive para la página de Contacto */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column; /* Apila las columnas en móviles */
+        gap: 25px;
+    }
+    .contact-mapa, .contact-details-col {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    .contact-details-col {
+        padding-top: 0;
+    }
+}
+
+
+/* --------------------------------- */
+/* --- RESPONSIVE GENERAL Y FINAL --- */
+/* --------------------------------- */
+
+@media (max-width: 1024px) {
+    /* Responsive Servicios */
+    .columnas-servicios {
+        gap: 20px;
+    }
+    .card-servicio {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Responsive Contacto */
+    .contacto-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-formulario, .col-info-mapa {
+        flex: 1 1 90%;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Responsive Empresa */
+    .columnas-empresa {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .col-valor {
+        flex: 1 1 90%;
+        max-width: 90%;
+    }
+}
+
+/* --- Media Query para el Menú de Hamburguesa --- */
+@media (max-width: 670px) {
+  /* RESPONSIVE GENERAL Y CABECERA (HAMBURGUESA) */
+  body { padding-top: 70px; } /* Ajustar padding para la altura de la cabecera móvil */
+  
+  .cabecera-fija {
+    flex-direction: row; /* Colocar logo y botón en fila */
+    height: 70px;
+    padding: 0.5em 1.5em;
+    justify-content: space-between; /* Alinea logo a un lado y botón al otro */
+  }
+  
+  .logo-container { margin-bottom: 0; }
+  
+  /* MOSTRAR BOTÓN DE HAMBURGUESA */
+  .menu-toggle {
+      display: block; 
+  }
+  
+  .main-nav {
+    /* MENÚ COLAPSADO */
+    position: absolute;
+    top: 70px; /* Debajo de la cabecera */
+    left: 0;
+    width: 100%;
+    max-height: 0; /* Ocultar el contenido */
+    overflow: hidden;
+    background: var(--cian-oscuro); /* Cambiado de --verde-oscuro a --cian-oscuro */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-direction: column; /* Elementos de navegación en columna */
+    padding: 0; /* Quitar padding inicial */
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    z-index: 1000; /* Asegurar que está sobre el contenido */
+  }
+  
+  /* MENÚ ABIERTO */
+  .main-nav.is-open {
+    max-height: 300px; /* Altura suficiente para mostrar todos los enlaces */
+    padding: 10px 0;
+  }
+
+  .main-nav a { 
+    margin: 5px 15px;
+    padding: 10px 15px;
+    width: auto; 
+    text-align: left; /* Alineamos a la izquierda para un menú tipo lista */
+    border-radius: 4px;
+    /* Al hacer hover en móvil, tiene el mismo color que en desktop */
+  }
+  
+  /* Resto de estilos responsive existentes */
+  .banner-titulo { font-size: 2em !important; }
+  .gallery-columns { flex-direction: column; align-items: center; gap: 14px; }
+  .gallery-col { max-width: 90%; min-width: 250px; }
+
+  /* Responsive Servicios */
+  .columnas-servicios {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card-servicio {
+        flex: 1 1 90%;
+        max-width: 90%;
+    }
+}
