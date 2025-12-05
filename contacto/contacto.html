@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto y Localización - Limpiezas R&C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <header class="cabecera-fija">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../logo/logo_compacto.png" alt="Limpiezas R&C Logo" class="logo">
+            </a>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav" id="menu-principal">
+            <a href="../index.html">Inicio</a>
+            <a href="../empresa/empresa.html">Empresa</a>
+            <a href="../servicios/servicios.html">Servicios</a>
+            <a href="contacto.html" class="active">Contacto y Localización</a>
+        </nav>
+    </header>
+    
+    <main class="contenido">
+        
+        <section class="blur-banner">
+            <h2 class="banner-titulo">Estamos aquí para ayudarte</h2>
+            <p>
+                Ponte en contacto con nosotros para un presupuesto sin compromiso o cualquier consulta.
+            </p>
+        </section>
+
+        <h2 class="elige-titulo" style="margin-bottom: 30px; text-align: center;">Contacta Directamente</h2>
+
+        <p class="contact-address">
+            <i class="fa fa-map-marker-alt"></i> Carrer Jafudà Cresques, 8 · Palma
+        </p>
+
+        <div class="contact-people-grid">
+
+            <div class="contact-person-card">
+                <h3>Regina</h3>
+                <div class="contact-buttons-group">
+                    <a href="https://wa.me/34671263683" target="_blank" class="btn-big"><i class="fab fa-whatsapp"></i> 671 26 36 83</a>
+                    <a href="mailto:rclimpiezasfernandez@gmail.com" class="btn-big"><i class="fa fa-envelope"></i> Mail</a>
+                </div>
+            </div>
+
+            <div class="contact-person-card">
+                <h3>Carla</h3>
+                <div class="contact-buttons-group">
+                    <a href="https://wa.me/34638963726" target="_blank" class="btn-big"><i class="fab fa-whatsapp"></i> 638 96 37 26</a>
+                    <a href="mailto:rclimpiezasfernandezc@gmail.com" class="btn-big"><i class="fa fa-envelope"></i> Mail</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="contacto-wrapper" style="max-width: 1000px; margin: 30px auto; padding: 0 15px;">
+            
+            <div class="contact-grid">
+                
+                <div class="contact-mapa">
+                    <h2 class="elige-titulo" style="text-align: center;">Nuestra Ubicación</h2>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.217968905617!2d2.652757058843!3d39.57862510622263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979255bb9ab%3A0x7b2a546ce49e!2sCarrer%20de%20Jafuda%20Cresques%2C%208%2C%20Nord%2C%200700%20Palma%2CIlles%20Balears!5e1!3m2!1ses!2ses!4v1764886681687!5m"
+                            width="100%" 
+                            height="100%" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        
+    </main>
+    
+    <footer>
+        <span>2025 © LIMPIEZAS R&C</span>
+    </footer>
+    
+    <script>
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu-principal');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('is-open');
+      });
+    </script>
+</body>
+</html>

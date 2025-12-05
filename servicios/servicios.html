@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Servicios - Limpiezas R&C</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../logo/logo_compacto.png" type="image/png">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <header class="cabecera-fija">
+    <div class="logo-container">
+      <a href="../index.html">
+        <img src="../logo/logo_compacto.png" alt="Limpiezas R&C Logo" class="logo">
+      </a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav class="main-nav" id="menu-principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../empresa/empresa.html">Empresa</a>
+      <a href="servicios.html" class="active">Servicios</a>
+      <a href="../contacto/contacto.html">Contacto y Localización</a>
+    </nav>
+  </header>
+  
+  <main class="contenido">
+    
+    <section class="blur-banner">
+      <h2 class="banner-titulo">Nuestros Servicios de Limpieza Integral</h2>
+      <p>
+        Ofrecemos una amplia gama de soluciones adaptadas a cada necesidad: desde limpiezas periódicas de mantenimiento hasta servicios especializados.
+      </p>
+    </section>
+    
+    <section class="servicios-categorias">
+      <h2 class="elige-titulo">Limpieza para Particulares, Empresas y Comunidades</h2>
+      
+      <div class="columnas-servicios">
+        
+        <div class="card-servicio">
+          <i class="fas fa-soap fa-3x icono-servicio"></i>
+          <h3>Limpieza de Mantenimiento Periódico</h3>
+          <p>Servicios regulares adaptados a tu frecuencia para mantener tu espacio siempre impecable.</p>
+          <ul class="detalles-servicio">
+            <li><i class="fas fa-check-circle"></i> Hogares y Oficinas</li>
+            <li><i class="fas fa-check-circle"></i> Naves Industriales</li>
+            <li><i class="fas fa-check-circle"></i> Alquileres Vacacionales</li>
+            <li><i class="fas fa-check-circle"></i> Barcos y Coches</li>
+          </ul>
+        </div>
+        
+        <div class="card-servicio">
+          <i class="fas fa-spray-can fa-3x icono-servicio"></i>
+          <h3>Limpiezas Especializadas y Profundas</h3>
+          <p>Limpiezas puntuales con maquinaria específica para resultados exigentes.</p>
+          <ul class="detalles-servicio">
+            <li><i class="fas fa-check-circle"></i> Limpieza de Obra</li>
+            <li><i class="fas fa-check-circle"></i> Desinfección de Choque</li>
+            <li><i class="fas fa-check-circle"></i> Limpieza de Cristales en Altura</li>
+          </ul>
+        </div>
+        
+        <div class="card-servicio">
+          <i class="fas fa-building fa-3x icono-servicio"></i>
+          <h3>Comunidades de Vecinos</h3>
+          <p>Mantenimiento integral de portales, escaleras, garajes y zonas comunes.</p>
+          <ul class="detalles-servicio">
+            <li><i class="fas fa-check-circle"></i> Pulido y Abrillantado de Suelos</li>
+            <li><i class="fas fa-check-circle"></i> Barrido y Fregado de Garajes</li>
+            <li><i class="fas fa-check-circle"></i> Limpieza de Mobiliario Urbano</li>
+          </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="../contacto/contacto.html" class="btn-big">Solicitar Presupuesto</a>
+    </div>
+
+  </main>
+  
+  <footer>
+    <span>2025 © LIMPIEZAS R&C</span>
+  </footer>
+  
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('menu-principal');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !isExpanded);
+      menu.classList.toggle('is-open');
+    });
+  </script>
+</body>
+</html>
