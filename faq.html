@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Preguntas Frecuentes - Limpiezas R&C</title>
+  <meta name="description" content="Resolvemos todas tus dudas sobre nuestros servicios de limpieza en Palma. Precios, horarios, productos y más.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .faq-item {
+      background: var(--blanco);
+      border: 2px solid var(--azul-claro);
+      border-radius: var(--radius);
+      margin-bottom: 1.5em;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--cian-principal);
+      box-shadow: var(--sombra-suave);
+    }
+
+    .faq-question {
+      background: var(--gris-claro);
+      padding: 1.5em;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.1em;
+      color: var(--cian-oscuro);
+      transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: var(--azul-claro);
+    }
+
+    .faq-question i {
+      font-size: 1.2em;
+      color: var(--cian-principal);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 1.5em;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 1.5em;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .faq-category {
+      background: linear-gradient(135deg, var(--cian-oscuro), var(--cian-principal));
+      color: var(--blanco);
+      padding: 1em 1.5em;
+      border-radius: var(--radius);
+      margin: 2em 0 1em 0;
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cabecera-fija">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logo/logo_compacto.png" alt="Limpiezas R&C Logo" class="logo">
+      </a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav class="main-nav" id="menu-principal">
+      <a href="index.html">Inicio</a>
+      <a href="empresa/empresa.html">Empresa</a>
+      <a href="servicios/servicios.html">Servicios</a>
+      <a href="contacto/contacto.html">Contacto</a>
+      <a href="faq.html" class="active">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/34671263683?text=Hola,%20necesito%20presupuesto%20de%20limpieza" class="btn-whatsapp-header" target="_blank">
+        <i class="fab fa-whatsapp"></i> Presupuesto Gratis
+      </a>
+    </div>
+  </header>
+
+  <main class="contenido">
+
+    <section class="hero-section">
+      <h1 class="banner-titulo">Preguntas Frecuentes</h1>
+      <p class="hero-subtitle">
+        Resolvemos todas tus dudas sobre nuestros servicios de limpieza profesional en Palma.<br>
+        Si no encuentras la respuesta, <strong>contáctanos directamente</strong>.
+      </p>
+    </section>
+
+    <div class="faq-container">
+
+      <!-- Categoría: Servicios -->
+      <div class="faq-category">
+        <i class="fas fa-broom"></i> Sobre Nuestros Servicios
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Qué servicios ofrecéis?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Ofrecemos limpieza integral para hogares, oficinas, comunidades de vecinos, alquileres vacacionales, limpiezas de obra, pulido y abrillantado de suelos, limpieza de cristales en altura, desinfección profunda y mucho más. Todos nuestros servicios utilizan productos ecológicos certificados.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Traéis vuestros propios productos y materiales?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Sí, llevamos todos los productos de limpieza ecológicos certificados y el material necesario (mopas, trapos, aspiradoras, etc.). Si prefieres que usemos algún producto específico tuyo, podemos adaptarnos sin problema.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Cuánto dura una limpieza?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Depende del tipo de servicio y tamaño del espacio. Una limpieza estándar de un piso de 80m² suele durar entre 2-3 horas. Limpiezas profundas o de obra pueden requerir más tiempo. Te damos siempre una estimación precisa en el presupuesto.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Limpiáis en fin de semana o festivos?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Sí, ofrecemos servicios los sábados con cita previa. Para domingos y festivos, consulta disponibilidad con nosotras. Nuestro horario principal es de lunes a viernes de 8:00 a 20:00h.</p>
+        </div>
+      </div>
+
+      <!-- Categoría: Precios -->
+      <div class="faq-category">
+        <i class="fas fa-euro-sign"></i> Precios y Presupuestos
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Cuánto cuestan vuestros servicios?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Los precios varían según el tipo de limpieza, tamaño del espacio y frecuencia. Hacemos presupuestos personalizados sin compromiso. Contáctanos por WhatsApp o email y te responderemos en menos de 24 horas con un precio ajustado a tus necesidades.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿El presupuesto es gratuito?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Sí, todos nuestros presupuestos son completamente gratuitos y sin compromiso. Te damos un precio cerrado sin costes ocultos ni sorpresas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Ofrecéis descuentos por servicios regulares?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Sí, tenemos tarifas especiales para clientes con servicios periódicos (semanales, quincenales o mensuales). Cuanto mayor es la frecuencia, mejor es el precio. Consúltanos para un presupuesto personalizado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Qué formas de pago aceptáis?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Aceptamos efectivo, transferencia bancaria y Bizum. Para empresas ofrecemos factura y posibilidad de domiciliación bancaria en servicios recurrentes.</p>
+        </div>
+      </div>
+
+      <!-- Categoría: Proceso -->
+      <div class="faq-category">
+        <i class="fas fa-clipboard-check"></i> Proceso y Garantías
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Cómo funciona el proceso de contratación?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Es muy sencillo: 1) Contáctanos por WhatsApp, email o teléfono. 2) Nos cuentas qué necesitas y te hacemos un presupuesto. 3) Acordamos fecha y hora. 4) Realizamos el servicio. 5) Pagas una vez finalizado y comprobado. ¡Así de fácil!</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Tengo que estar presente durante la limpieza?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>No es necesario. Muchos clientes nos dejan las llaves y nosotras realizamos el servicio con total profesionalidad y discreción. También podemos trabajar mientras estás en casa si lo prefieres.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Qué garantías ofrecéis?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Garantizamos la calidad de todos nuestros servicios. Si algo no cumple tus expectativas, volvemos sin coste adicional para corregirlo. Además, contamos con seguro de responsabilidad civil para tu total tranquilidad.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Puedo cancelar o cambiar la fecha del servicio?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Sí, entendemos que pueden surgir imprevistos. Te pedimos que nos avises con al menos 24 horas de antelación para poder reorganizar nuestra agenda.</p>
+        </div>
+      </div>
+
+      <!-- Categoría: Zona y Disponibilidad -->
+      <div class="faq-category">
+        <i class="fas fa-map-marked-alt"></i> Zona y Disponibilidad
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿En qué zonas trabajáis?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Trabajamos principalmente en Palma de Mallorca y alrededores. Si necesitas servicio fuera de Palma, consúltanos y valoraremos la posibilidad según la distancia.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Con cuánta antelación debo reservar?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Recomendamos reservar con 2-3 días de antelación, especialmente en temporada alta. Para emergencias, intentamos adaptarnos y ofrecer servicios express según disponibilidad.</p>
+        </div>
+      </div>
+
+      <!-- Categoría: Productos y Medio Ambiente -->
+      <div class="faq-category">
+        <i class="fas fa-leaf"></i> Productos Ecológicos
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Qué productos ecológicos utilizáis?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Utilizamos exclusivamente productos de limpieza certificados ecológicos, biodegradables y sin tóxicos. Son seguros para personas, mascotas y el medio ambiente, y igual de efectivos que los productos convencionales.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>¿Son seguros para niños y mascotas?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Sí, completamente. Todos nuestros productos son hipoalergénicos y no tóxicos. Podéis estar tranquilos con niños pequeños y mascotas en casa.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Final -->
+    <section class="cta-final" style="margin: 60px auto;">
+      <p style="font-size: 1.3em; color: var(--cian-oscuro); margin-bottom: 0.5em;">
+        <strong>¿No encuentras tu respuesta?</strong>
+      </p>
+      <p style="color: #555; margin-bottom: 2em;">
+        Contáctanos directamente y resolveremos todas tus dudas
+      </p>
+      <a href="https://wa.me/34671263683?text=Hola,%20tengo%20una%20consulta" class="btn-cta-grande" target="_blank">
+        <i class="fab fa-whatsapp"></i> Pregúntanos por WhatsApp
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <span>2026 © LIMPIEZAS R&C - Servicios Profesionales de Limpieza en Palma</span>
+      <div class="footer-links">
+        <a href="politica-privacidad.html">Política de Privacidad</a> | 
+        <a href="aviso-legal.html">Aviso Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34671263683?text=Hola,%20necesito%20información" class="whatsapp-flotante" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // Menú móvil
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('menu-principal');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !isExpanded);
+      menu.classList.toggle('is-open');
+    });
+
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const menu = document.getElementById('menu-principal');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Acordeón FAQ
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isActive = item.classList.contains('active');
+
+        // Cerrar todos los items abiertos
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+        // Abrir el clickeado si no estaba activo
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

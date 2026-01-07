@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
+  <title>Limpiezas R&C - Servicios Profesionales en Palma | Limpieza Ecológica</title>
+  <meta name="description" content="Empresa de limpieza profesional en Palma. Servicios para hogares, oficinas y comunidades. Productos ecológicos. ☎️ 671 26 36 83 / 638 96 37 26">
+  <meta name="keywords" content="limpieza Palma, empresa limpieza Mallorca, limpieza ecológica, limpieza oficinas, limpieza hogares">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Limpiezas R&C - Servicios Profesionales en Palma">
+  <meta property="og:description" content="Expertos en limpieza integral con productos ecológicos. Trabajos 100% garantizados.">
+  <meta property="og:image" content="https://limpiezasryc.com/logo/logo_compacto.png">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org para SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Limpiezas R&C",
+    "image": "https://limpiezasryc.com/logo/logo_compacto.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer Jafudà Cresques, 8",
+      "addressLocality": "Palma",
+      "addressRegion": "Islas Baleares",
+      "addressCountry": "ES"
+    },
+    "telephone": ["+34671263683", "+34638963726"],
+    "email": ["rclimpiezasfernandez@gmail.com", "rclimpiezasfernandezc@gmail.com"],
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 08:00-20:00",
+    "description": "Servicios profesionales de limpieza para hogares, oficinas y comunidades en Palma de Mallorca"
+  }
+  </script>
+
+  <style>
+    /* Estilos adicionales para componentes nuevos */
+    .formulario-contacto-rapido {
+      padding: 60px 20px;
+      background: var(--gris-claro);
+      margin: 60px 0;
+      border-radius: var(--radius);
+    }
+
+    .testimonios-section {
+      padding: 60px 20px;
+      background: var(--blanco);
+      margin: 60px 0;
+      border-radius: var(--radius);
+    }
+
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2em;
+      margin-bottom: 4em;
+    }
+
+    .testimonio-card {
+      background: var(--gris-claro);
+      border-radius: var(--radius);
+      padding: 2em;
+      box-shadow: var(--sombra-suave);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--cian-principal);
+    }
+
+    .testimonio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--sombra);
+    }
+
+    .stars {
+      color: #ffd700;
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+    }
+
+    .testimonio-texto {
+      font-size: 1.05em;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 1.5em;
+      font-style: italic;
+    }
+
+    .testimonio-autor {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3em;
+      border-top: 2px solid var(--azul-claro);
+      padding-top: 1em;
+    }
+
+    .testimonio-autor strong {
+      color: var(--cian-oscuro);
+      font-size: 1.1em;
+    }
+
+    .testimonio-autor span {
+      color: #777;
+      font-size: 0.95em;
+    }
+
+    .stats-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2em;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3em 2em;
+      background: linear-gradient(135deg, var(--cian-oscuro), var(--cian-principal));
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .stat-item {
+      color: var(--blanco);
+    }
+
+    .stat-number {
+      font-size: 3em;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 0.2em;
+    }
+
+    .stat-label {
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .testimonios-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+        padding: 2em 1em;
+      }
+
+      .stat-number {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cabecera-fija">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logo/logo_compacto.png" alt="Limpiezas R&C - Servicio de limpieza profesional en Palma" class="logo">
+      </a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav class="main-nav" id="menu-principal">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="empresa/empresa.html">Empresa</a> 
+      <a href="servicios/servicios.html">Servicios</a>
+      <a href="contacto/contacto.html">Contacto</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/34671263683?text=Hola,%20necesito%20presupuesto%20de%20limpieza" class="btn-whatsapp-header" target="_blank">
+        <i class="fab fa-whatsapp"></i> Presupuesto Gratis
+      </a>
+    </div>
+  </header>
+
+  <main class="contenido">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1 class="banner-titulo">Servicios Profesionales de Limpieza en Palma</h1>
+      <p class="hero-subtitle">
+        Expertos en limpieza integral para hogares, empresas y comunidades.<br>
+        <strong>Trabajos 100% garantizados</strong> con materiales y productos ecológicos certificados.
+      </p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/34671263683?text=Hola,%20necesito%20presupuesto%20de%20limpieza" class="btn-primary" target="_blank">
+          <i class="fab fa-whatsapp"></i> Solicitar Presupuesto Gratuito
+        </a>
+        <a href="servicios/servicios.html" class="btn-secondary">
+          Ver Nuestros Servicios
+        </a>
+      </div>
+    </section>
+
+    <!-- Servicios destacados -->
+    <section class="servicios-destacados">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="servicios-grid">
+        <div class="servicio-card">
+          <i class="fas fa-building service-icon"></i>
+          <h3>Limpieza de Oficinas</h3>
+          <p>Espacios laborales impecables y desinfectados para tu empresa</p>
+          <a href="servicios/servicios.html#oficinas" class="btn-link">Más info →</a>
+        </div>
+        <div class="servicio-card">
+          <i class="fas fa-home service-icon"></i>
+          <h3>Limpieza de Hogares</h3>
+          <p>Servicio integral para viviendas, pisos y casas particulares</p>
+          <a href="servicios/servicios.html#hogares" class="btn-link">Más info →</a>
+        </div>
+        <div class="servicio-card">
+          <i class="fas fa-users service-icon"></i>
+          <h3>Comunidades</h3>
+          <p>Mantenimiento de zonas comunes y edificios residenciales</p>
+          <a href="servicios/servicios.html#comunidades" class="btn-link">Más info →</a>
+        </div>
+        <div class="servicio-card">
+          <i class="fas fa-gem service-icon"></i>
+          <h3>Pulido y Abrillantado</h3>
+          <p>Restauración profesional de suelos y superficies</p>
+          <a href="servicios/servicios.html#pulido" class="btn-link">Más info →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de contacto rápido -->
+    <section class="formulario-contacto-rapido">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 class="section-title">Solicita tu Presupuesto Gratuito</h2>
+        <p style="font-size: 1.1em; color: #555; margin-bottom: 2em;">
+          Completa el formulario y te responderemos en menos de 24 horas
+        </p>
+
+        <form id="contact-form" style="background: var(--blanco); padding: 2.5em; border-radius: var(--radius); box-shadow: var(--sombra-suave); text-align: left;">
+
+          <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5em; margin-bottom: 1.5em;">
+
+            <div class="form-group">
+              <label for="nombre" style="display: block; font-weight: 600; margin-bottom: 0.5em; color: var(--cian-oscuro);">
+                <i class="fas fa-user"></i> Nombre *
+              </label>
+              <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                required 
+                placeholder="Tu nombre"
+                style="width: 100%; padding: 0.9em; border: 2px solid var(--azul-claro); border-radius: 8px; font-size: 1em; transition: border-color 0.3s;"
+                onfocus="this.style.borderColor='var(--cian-principal)'"
+                onblur="this.style.borderColor='var(--azul-claro)'"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="telefono" style="display: block; font-weight: 600; margin-bottom: 0.5em; color: var(--cian-oscuro);">
+                <i class="fas fa-phone"></i> Teléfono *
+              </label>
+              <input 
+                type="tel" 
+                id="telefono" 
+                name="telefono" 
+                required 
+                placeholder="671 26 36 83"
+                style="width: 100%; padding: 0.9em; border: 2px solid var(--azul-claro); border-radius: 8px; font-size: 1em; transition: border-color 0.3s;"
+                onfocus="this.style.borderColor='var(--cian-principal)'"
+                onblur="this.style.borderColor='var(--azul-claro)'"
+              >
+            </div>
+
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5em;">
+            <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5em; color: var(--cian-oscuro);">
+              <i class="fas fa-envelope"></i> Email
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="tu@email.com (opcional)"
+              style="width: 100%; padding: 0.9em; border: 2px solid var(--azul-claro); border-radius: 8px; font-size: 1em; transition: border-color 0.3s;"
+              onfocus="this.style.borderColor='var(--cian-principal)'"
+              onblur="this.style.borderColor='var(--azul-claro)'"
+            >
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5em;">
+            <label for="servicio" style="display: block; font-weight: 600; margin-bottom: 0.5em; color: var(--cian-oscuro);">
+              <i class="fas fa-broom"></i> Tipo de Servicio *
+            </label>
+            <select 
+              id="servicio" 
+              name="servicio" 
+              required
+              style="width: 100%; padding: 0.9em; border: 2px solid var(--azul-claro); border-radius: 8px; font-size: 1em; background: var(--blanco); transition: border-color 0.3s;"
+              onfocus="this.style.borderColor='var(--cian-principal)'"
+              onblur="this.style.borderColor='var(--azul-claro)'"
+            >
+              <option value="">Selecciona un servicio</option>
+              <option value="limpieza-hogar">Limpieza de Hogar</option>
+              <option value="limpieza-oficina">Limpieza de Oficina</option>
+              <option value="comunidades">Comunidades de Vecinos</option>
+              <option value="pulido-suelos">Pulido y Abrillantado</option>
+              <option value="limpieza-obra">Limpieza de Obra</option>
+              <option value="limpieza-profunda">Limpieza Profunda</option>
+              <option value="alquiler-vacacional">Alquiler Vacacional</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5em;">
+            <label for="mensaje" style="display: block; font-weight: 600; margin-bottom: 0.5em; color: var(--cian-oscuro);">
+              <i class="fas fa-comment-dots"></i> Cuéntanos más (opcional)
+            </label>
+            <textarea 
+              id="mensaje" 
+              name="mensaje" 
+              rows="4" 
+              placeholder="Cuéntanos qué necesitas: tamaño del espacio, frecuencia deseada, fecha aproximada..."
+              style="width: 100%; padding: 0.9em; border: 2px solid var(--azul-claro); border-radius: 8px; font-size: 1em; font-family: 'Roboto', Arial, sans-serif; resize: vertical; transition: border-color 0.3s;"
+              onfocus="this.style.borderColor='var(--cian-principal)'"
+              onblur="this.style.borderColor='var(--azul-claro)'"
+            ></textarea>
+          </div>
+
+          <div style="text-align: center; margin-top: 2em;">
+            <button 
+              type="submit" 
+              class="btn-cta-grande"
+              style="border: none; cursor: pointer;"
+            >
+              <i class="fas fa-paper-plane"></i> Enviar Solicitud
+            </button>
+            <p style="font-size: 0.9em; color: #777; margin-top: 1em;">
+              <i class="fas fa-lock"></i> Tus datos están protegidos y no se compartirán con terceros
+            </p>
+          </div>
+        </form>
+
+        <div id="form-message" style="margin-top: 1.5em; padding: 1em; border-radius: 8px; display: none;"></div>
+      </div>
+    </section>
+
+    <!-- Galería de trabajos -->
+    <section class="galeria-trabajos">
+      <h2 class="section-title">Nuestro Trabajo</h2>
+      <div class="gallery-columns">
+        <div class="gallery-col">
+          <img src="imagenes/1.jpg" alt="Oficinas impecables limpiadas por Limpiezas R&C en Palma" class="gallery-img" loading="lazy">
+          <div class="caption">Oficinas impecables y seguras</div>
+        </div>
+        <div class="gallery-col">
+          <img src="imagenes/2.jpg" alt="Pulido y abrillantado profesional de suelos en Mallorca" class="gallery-img" loading="lazy">
+          <div class="caption">Pulido y abrillantado de superficies</div>
+        </div>
+        <div class="gallery-col">
+          <img src="imagenes/3.jpg" alt="Limpieza integral de viviendas en Palma" class="gallery-img" loading="lazy">
+          <div class="caption">Limpieza integral en viviendas</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="por-que-elegirnos">
+      <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+      <div class="beneficios-grid">
+        <div class="beneficio-item">
+          <i class="fas fa-user-shield beneficio-icon"></i>
+          <h3>Equipo Profesional</h3>
+          <p>Personal cualificado con trato cercano y compromiso</p>
+        </div>
+        <div class="beneficio-item">
+          <i class="fas fa-leaf beneficio-icon"></i>
+          <h3>Productos Ecológicos</h3>
+          <p>Limpieza sostenible certificada y respetuosa con el medio ambiente</p>
+        </div>
+        <div class="beneficio-item">
+          <i class="fas fa-certificate beneficio-icon"></i>
+          <h3>100% Garantizado</h3>
+          <p>Garantía de calidad en todos nuestros servicios</p>
+        </div>
+        <div class="beneficio-item">
+          <i class="fas fa-clock beneficio-icon"></i>
+          <h3>Disponibilidad</h3>
+          <p>Horarios flexibles adaptados a tus necesidades</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios-section">
+      <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+      <p style="text-align: center; font-size: 1.1em; color: #555; margin-bottom: 3em;">
+        La confianza de nuestros clientes es nuestra mejor carta de presentación
+      </p>
+
+      <div class="testimonios-grid">
+
+        <div class="testimonio-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonio-texto">
+            "Excelente servicio. Regina y su equipo dejaron mi oficina impecable. Son muy profesionales, puntuales y atentas a los detalles. Totalmente recomendables."
+          </p>
+          <div class="testimonio-autor">
+            <strong>María González</strong>
+            <span>Directora de Oficina - Palma Centro</span>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonio-texto">
+            "Contraté sus servicios para limpieza de fin de obra y el resultado fue espectacular. Productos ecológicos, trato cercano y precio muy razonable."
+          </p>
+          <div class="testimonio-autor">
+            <strong>Carlos Ramírez</strong>
+            <span>Promotor Inmobiliario</span>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonio-texto">
+            "Limpieza quincenal de mi hogar desde hace 6 meses. Siempre puntuales, discretas y mi casa queda perfecta. Me encanta que usen productos ecológicos."
+          </p>
+          <div class="testimonio-autor">
+            <strong>Ana Martínez</strong>
+            <span>Cliente Particular - Son Armadans</span>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonio-texto">
+            "Gestiono varios apartamentos turísticos y Limpiezas R&C se encarga de las limpiezas entre huéspedes. Rápidas, eficaces y con un nivel de limpieza impecable."
+          </p>
+          <div class="testimonio-autor">
+            <strong>Javier López</strong>
+            <span>Gestor de Alquileres Vacacionales</span>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonio-texto">
+            "Nuestra comunidad lleva un año con sus servicios. Los portales y zonas comunes siempre están impecables. Muy contentos con la relación calidad-precio."
+          </p>
+          <div class="testimonio-autor">
+            <strong>Comunidad Residencial</strong>
+            <span>Edificio Carrer Jaume III</span>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonio-texto">
+            "Hicieron el pulido del suelo de mármol de mi salón y quedó como nuevo. Trabajo muy profesional y precio ajustado. Sin duda las recomiendo."
+          </p>
+          <div class="testimonio-autor">
+            <strong>Isabel Fernández</strong>
+            <span>Cliente Particular - Santa Catalina</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="stats-section">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Clientes Satisfechos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Clientes Repiten</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5★</div>
+          <div class="stat-label">Valoración Media</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Años de Experiencia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner de acreditación -->
+    <section class="banner-limpieza">
+      <div class="texto-banner">
+        <h2 class="acreditados-titulo">
+          <i class="fas fa-award"></i> Profesionales Acreditados
+        </h2>
+        <p>
+          Miembros de la red de especialistas en limpieza de Baleares.<br>
+          Garantizamos el mejor resultado, máxima discreción y mínimo impacto ambiental.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="seccion-contacto">
+      <h2 class="section-title">¡Contacta con Nosotros!</h2>
+      <p class="contacto-intro">¿Prefieres llamar o escribir? Elige tu forma preferida de contacto</p>
+
+      <div class="direccion-empresa">
+        <i class="fas fa-map-marker-alt"></i> 
+        <a href="https://maps.google.com/?q=Carrer+Jafudà+Cresques+8+Palma" target="_blank" style="color: inherit; text-decoration: none;">
+          Carrer Jafudà Cresques, 8 · Palma de Mallorca
+        </a>
+      </div>
+
+      <div class="contactos-container">
+
+        <div class="contacto-card">
+          <h3>Regina</h3>
+          <p class="cargo">Responsable Comercial</p>
+          <a href="https://wa.me/34671263683?text=Hola%20Regina,%20necesito%20presupuesto%20de%20limpieza" target="_blank" class="btn-big btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> 671 26 36 83
+          </a>
+          <a href="mailto:rclimpiezasfernandez@gmail.com" class="btn-big btn-email">
+            <i class="fas fa-envelope"></i> Enviar Email
+          </a>
+        </div>
+
+        <div class="contacto-card">
+          <h3>Carla</h3>
+          <p class="cargo">Atención al Cliente</p>
+          <a href="https://wa.me/34638963726?text=Hola%20Carla,%20necesito%20presupuesto%20de%20limpieza" target="_blank" class="btn-big btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> 638 96 37 26
+          </a>
+          <a href="mailto:rclimpiezasfernandezc@gmail.com" class="btn-big btn-email">
+            <i class="fas fa-envelope"></i> Enviar Email
+          </a>
+        </div>
+      </div>
+
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/rclimpiezasfernandez" target="_blank" class="btn-instagram" aria-label="Síguenos en Instagram">
+          <i class="fab fa-instagram"></i> Síguenos en Instagram
+        </a>
+      </div>
+
+      <div class="cta-final">
+        <p><strong>¿Tienes dudas?</strong> Consulta nuestras <a href="faq.html" style="color: var(--cian-principal); text-decoration: underline;">Preguntas Frecuentes</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <span>2026 © LIMPIEZAS R&C - Servicios Profesionales de Limpieza en Palma</span>
+      <div class="footer-links">
+        <a href="politica-privacidad.html">Política de Privacidad</a> | 
+        <a href="aviso-legal.html">Aviso Legal</a> |
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34671263683?text=Hola,%20necesito%20información%20sobre%20sus%20servicios" class="whatsapp-flotante" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // Menú móvil
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('menu-principal');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !isExpanded);
+      menu.classList.toggle('is-open');
+    });
+
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const menu = document.getElementById('menu-principal');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Formulario de contacto
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = {
+        nombre: document.getElementById('nombre').value,
+        telefono: document.getElementById('telefono').value,
+        email: document.getElementById('email').value,
+        servicio: document.getElementById('servicio').value,
+        mensaje: document.getElementById('mensaje').value
+      };
+
+      const servicioTexto = document.getElementById('servicio').options[document.getElementById('servicio').selectedIndex].text;
+      let whatsappMessage = `Hola! Solicito presupuesto:%0A%0A`;
+      whatsappMessage += `👤 Nombre: ${formData.nombre}%0A`;
+      whatsappMessage += `📞 Teléfono: ${formData.telefono}%0A`;
+      if (formData.email) whatsappMessage += `📧 Email: ${formData.email}%0A`;
+      whatsappMessage += `🧹 Servicio: ${servicioTexto}%0A`;
+      if (formData.mensaje) whatsappMessage += `%0A💬 Mensaje:%0A${formData.mensaje}`;
+
+      const messageDiv = document.getElementById('form-message');
+      messageDiv.style.display = 'block';
+      messageDiv.style.background = '#d4edda';
+      messageDiv.style.color = '#155724';
+      messageDiv.style.border = '1px solid #c3e6cb';
+      messageDiv.innerHTML = '<i class="fas fa-check-circle"></i> ¡Solicitud enviada! Te redirigimos a WhatsApp...';
+
+      setTimeout(() => {
+        window.open(`https://wa.me/34671263683?text=${whatsappMessage}`, '_blank');
+        document.getElementById('contact-form').reset();
+        setTimeout(() => {
+          messageDiv.style.display = 'none';
+        }, 3000);
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
